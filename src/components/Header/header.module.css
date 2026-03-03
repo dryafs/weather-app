@@ -1,6 +1,6 @@
 .header {
-    padding-top: 48px;
-    margin-bottom: 64px;
+    padding-top: 36px;
+    margin-bottom: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +8,8 @@
 }
 
 .logo {
+    width: 200px;
     height: 40px;
-
 }
 
 .menuButton {
@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .arrow {
@@ -36,7 +37,7 @@
     padding-bottom: 15px;
     padding-top: 10px;
     text-align: center;
-    width: 100%;
+
 }
 
 .button:hover {
@@ -50,8 +51,7 @@
     border-radius: 12px;
     width: 215px;
     padding: 10px 15px 10px 15px;
-    position: absolute;
-    z-index: 2;
+    z-index: 10;
 }
 
 .title {
@@ -75,7 +75,6 @@
 }
 
 .item {
-
     padding-left: 10px;
 }
 
@@ -83,4 +82,16 @@
     height: 1px;
     margin: 12px 0;
     background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding-top: 20px;
+        margin-bottom: 28px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 28px;
+    }
 }

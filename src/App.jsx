@@ -13,7 +13,7 @@ import styles from './app.module.css'
 function App() {
   const [weather, setWeather] = useState(null);
   const [place, setPlace] = useState(null)
-  const [units, setUnits] = useState("metric");
+  const [units, setUnits] = useState(() => localStorage.getItem("units") || "metric");
   const [error, setError] = useState(false);
   const [notFound, setNotFound] = useState(false)
   const [loading, setLoading] = useState(true);
@@ -38,6 +38,7 @@ function App() {
       setWeather(weather);
       setError(false);
       setNotFound(false);
+      localStorage.setItem("lastCity", cityName);
 
     } catch (e) {
       setError(true)
@@ -47,7 +48,8 @@ function App() {
   }
 
   useEffect(() => {
-    loadCity("Dublin");
+    const savedCity = localStorage.getItem("lastCity") || "Dublin";
+    loadCity(savedCity);
   }, [])
 
   useEffect(() => {
@@ -67,6 +69,7 @@ function App() {
         setWeather(weather);
         setError(false);
         setNotFound(false);
+        localStorage.setItem("units", units);
       } catch (e) {
         setError(true)
       } finally {
@@ -102,19 +105,24 @@ const View = ({ onHandleSubmit, weather, setUnits, units, place, error, notFound
               <section className={styles.hero}>
                 <h1 className={styles.title}>How's the sky looking today?</h1>
                 <SearchBar onSubmitCity={onHandleSubmit} />
+                {notFound && !loading && (
+                  <p className={styles.notFound}>City not found. Please try a different name.</p>
+                )}
               </section>
 
-              <section className={styles.forecast}>
-                <div className={styles.left}>
-                  <CurrentCard weather={weather} place={place} loading={loading} />
-                  <StatsRow weather={weather} loading={loading} />
-                  <DailyForecast weather={weather} loading={loading} />
-                </div>
+              {!notFound && (
+                <section className={styles.forecast}>
+                  <div className={styles.left}>
+                    <CurrentCard weather={weather} place={place} loading={loading} />
+                    <StatsRow weather={weather} loading={loading} />
+                    <DailyForecast weather={weather} loading={loading} />
+                  </div>
 
-                <div className={styles.right}>
-                  <HourlyForecast weather={weather} loading={loading} />
-                </div>
-              </section>
+                  <div className={styles.right}>
+                    <HourlyForecast weather={weather} loading={loading} />
+                  </div>
+                </section>
+              )}
             </>
           ) : (
             <section className={styles.errorSection}>

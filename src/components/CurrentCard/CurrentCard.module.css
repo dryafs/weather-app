@@ -6,6 +6,8 @@
 .card {
     background-image: url('../../images/bg_card.png');
     border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,6 +45,7 @@
     width: 120px;
     height: 120px;
 }
+
 .cardSkeleton {
     background-color: #1a1935;
     border-radius: 15px;
@@ -103,4 +106,29 @@
     width: 100px;
     height: 80px;
     border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+
+    .card,
+    .cardSkeleton {
+        padding: 40px 20px;
+    }
+
+    .temperature {
+        font-size: 64px;
+    }
+
+    .weather_icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .location {
+        font-size: 20px;
+    }
+
+    .date {
+        font-size: 15px;
+    }
 }

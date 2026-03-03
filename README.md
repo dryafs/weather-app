@@ -1,16 +1,59 @@
-# React + Vite
+# 🌤 Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive weather application built with React and Vite, powered by the free [Open-Meteo API](https://open-meteo.com/).
 
-Currently, two official plugins are available:
+![Weather App Preview](./public/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- 🔍 **City search** with real-time autocomplete suggestions
+- 📍 **Geolocation-aware** — suggestions sorted by proximity to your location
+- 🌡 **Current weather** — temperature, weather condition, location & date
+- 📊 **Stats row** — feels like, humidity, wind speed, precipitation
+- 📅 **7-day daily forecast**
+- ⏱ **Hourly forecast** with per-day selector
+- 🔄 **Unit toggle** — Metric (°C, km/h, mm) ↔ Imperial (°F, mph, in)
+- 💾 **Persistent** — remembers your last city and unit preference via `localStorage`
+- 💀 **Skeleton loading** states for all components
+- 📱 **Fully responsive** — works on desktop, tablet and mobile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Layer | Technology |
+|---|---|
+| Framework | [React 18](https://react.dev/) + [Vite](https://vite.dev/) |
+| UI Components | [Headless UI](https://headlessui.com/) |
+| Styling | CSS Modules |
+| API | [Open-Meteo](https://open-meteo.com/) (no API key required) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Project Structure
+
+```
+src/
+├── api/
+│   └── openMeteo.js        # Geocoding + forecast API calls
+├── components/
+│   ├── CurrentCard/        # Current weather card
+│   ├── DailyForecast/      # 7-day forecast
+│   ├── ErrorMessage/       # Error state
+│   ├── Header/             # Units toggle menu
+│   ├── HourlyForecast/     # Hourly forecast with day picker
+│   ├── SearchBar/          # Search with autocomplete
+│   └── StatsRow/           # Weather statistics
+├── utils/
+│   ├── selectors.js        # Data selectors from API response
+│   └── weathericons.js     # Weather code → icon/label mapping
+└── App.jsx                 # Root app + state management
+```

@@ -1,15 +1,19 @@
 .wrap {
     position: relative;
     margin-bottom: 48px;
+    width: 100%;
+    max-width: 620px;
 }
 
 .form {
     display: flex;
+    width: 100%;
 }
 
 .input {
     background-color: #262540;
-    width: 526px;
+    flex: 1;
+    min-width: 0;
     height: 56px;
     border-radius: 12px;
     padding-left: 30px;
@@ -37,16 +41,18 @@
     padding: 15px 25px;
     border-radius: 12px;
     transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
 .button:hover {
     background-color: #3848c4;
 }
+
 .dropdown {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    width: 526px;
+    width: 100%;
     background-color: #1e1d3a;
     border: 1px solid #3C3B5E;
     border-radius: 12px;
@@ -99,4 +105,17 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     text-align: right;
+}
+
+@media (max-width: 480px) {
+    .input {
+        font-size: 16px;
+        height: 48px;
+        padding-left: 16px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
 }

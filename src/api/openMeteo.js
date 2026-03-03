@@ -2,7 +2,7 @@ const GEO_BASE = "https://geocoding-api.open-meteo.com/v1/search";
 const FORECAST_BASE = "https://api.open-meteo.com/v1/forecast";
 
 function mapUnits(units) {
-    if (units === "imperic") {
+    if (units === "imperial") {
         return {
             temperature_unit: "fahrenheit",
             wind_speed_unit: "mph",
@@ -26,7 +26,7 @@ export async function geocodeCity(name, { count = 1, language = "en" } = {}) {
     const data = await res.json();
 
     const geocode = data?.results?.[0];
-    if (!geocode) throw new Error("City not found");
+    if (!geocode) return null;
 
     return {
         name: geocode.name,
