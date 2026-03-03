@@ -1,0 +1,84 @@
+.wrap {
+    margin-bottom: 80px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.title {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    background-color: #262540;
+    border: 1px solid #3C3B5E;
+    border-radius: 12px;
+
+}
+
+.day {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 16px;
+}
+
+.temperatures {
+    padding-top: 16px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+.skeletonLine {
+    background: linear-gradient(90deg, #302F4A 25%, #3c3b5e 50%, #302F4A 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 6px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.itemSkeleton {
+    align-items: center;
+}
+
+.skeletonTitle {
+    width: 120px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.skeletonDay {
+    width: 100%;
+    height: 18px;
+    margin-bottom: 16px;
+}
+
+.skeletonIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto 4px;
+}
+
+.skeletonTemp {
+    width: 30px;
+    height: 16px;
+}

@@ -1,0 +1,106 @@
+.wrap {
+    margin-bottom: 32px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.card {
+    background-image: url('../../images/bg_card.png');
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 30px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.location {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.date {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+
+}
+
+.temperature {
+    font-size: 96px;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+}
+
+.weather_icon {
+    width: 120px;
+    height: 120px;
+}
+.cardSkeleton {
+    background-color: #1a1935;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 30px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.skeletonLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeletonRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.skeletonLine {
+    background: linear-gradient(90deg, #262540 25%, #302F4A 50%, #262540 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 8px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeletonLocation {
+    width: 180px;
+    height: 28px;
+}
+
+.skeletonDate {
+    width: 120px;
+    height: 18px;
+    opacity: 0.7;
+}
+
+.skeletonIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.skeletonTemp {
+    width: 100px;
+    height: 80px;
+    border-radius: 8px;
+}

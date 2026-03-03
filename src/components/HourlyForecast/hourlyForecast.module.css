@@ -1,0 +1,167 @@
+.wrap {
+    background-color: #262540;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    padding: 24px;
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main_btn {
+    background-color: #3C3B5E;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 5px;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #262540;
+    border: 1px solid #3C3B5E;
+    border-radius: 12px;
+    width: 215px;
+    padding: 15px 15px 0 15px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.item_menu {
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.selected {
+    background-color: #302F4A;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+}
+
+.option {
+    color: #fff;
+    font-size: 16px;
+    padding-right: 12px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 592px;
+    overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.item {
+    display: flex;
+    background-color: #302F4A;
+    border: 1px solid #3C3B5E;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    color: #fff;
+}
+
+.timing {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+}
+
+.time {
+    font-size: 20px;
+}
+
+.temperature {
+    font-size: 16px;
+}
+
+.skeletonLine {
+    background: linear-gradient(90deg, #302F4A 25%, #3c3b5e 50%, #302F4A 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 6px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.itemSkeleton {
+    pointer-events: none;
+}
+
+.skeletonTitle {
+    width: 130px;
+    height: 20px;
+}
+
+.skeletonBtn {
+    width: 90px;
+    height: 34px;
+    border-radius: 8px;
+}
+
+.skeletonIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.skeletonTime {
+    width: 60px;
+    height: 20px;
+}
+
+.skeletonTemp {
+    width: 40px;
+    height: 16px;
+}
