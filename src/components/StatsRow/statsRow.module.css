@@ -1,11 +1,11 @@
 .wrap {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     font-family: 'DM Sans', sans-serif;
 }
 
 .indicators {
     display: grid;
-    gap: 24px;
+    gap: 16px;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -19,7 +19,7 @@
 .name {
     color: #D4D3D9;
     font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
 }
 
 .indicate {
@@ -27,6 +27,7 @@
     font-weight: 300;
     color: #fff;
 }
+
 .skeletonLine {
     background: linear-gradient(90deg, #302F4A 25%, #3c3b5e 50%, #302F4A 75%);
     background-size: 200% 100%;
@@ -53,4 +54,28 @@
 .skeletonValue {
     width: 50%;
     height: 28px;
+}
+
+@media (max-width: 700px) {
+    .indicators {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+    }
+
+    .name {
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .indicate {
+        font-size: 24px;
+    }
 }

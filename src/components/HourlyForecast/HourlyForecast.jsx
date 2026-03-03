@@ -36,7 +36,7 @@ function HourlyForecast({ weather, loading }) {
                     <ListboxOptions anchor="bottom" className={styles.menu}>
                         {
                             dayOptions.map((day) => (
-                                <ListboxOption value={day} id={day.dateStr} className={({ selected }) => selected ? [styles.item_menu, styles.selected].join(" ") : styles.item_menu}>
+                                <ListboxOption key={day.dateStr} value={day} className={({ selected }) => selected ? [styles.item_menu, styles.selected].join(" ") : styles.item_menu}>
                                     {day.label}
                                 </ListboxOption>
                             ))

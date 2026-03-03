@@ -1,5 +1,5 @@
 .wrap {
-    margin-bottom: 80px;
+    margin-bottom: 32px;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -13,6 +13,8 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 4px;
 }
 
 .item {
@@ -38,6 +40,7 @@
     color: #fff;
     justify-content: space-between;
 }
+
 .skeletonLine {
     background: linear-gradient(90deg, #302F4A 25%, #3c3b5e 50%, #302F4A 75%);
     background-size: 200% 100%;
@@ -81,4 +84,14 @@
 .skeletonTemp {
     width: 30px;
     height: 16px;
+}
+
+@media (max-width: 600px) {
+    .list {
+        grid-template-columns: repeat(7, minmax(72px, 1fr));
+    }
+
+    .day {
+        font-size: 15px;
+    }
 }

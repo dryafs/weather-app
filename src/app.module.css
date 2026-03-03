@@ -1,52 +1,93 @@
-.page{
+.page {
     scrollbar-gutter: stable;
     background-color: #02012C;
     min-height: 100vh;
 }
 
-.container{
+.container {
     max-width: 1184px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.title{
+.title {
     color: #fff;
     font-size: 52px;
     font-weight: 600;
     font-family: "Bricolage Grotesque", sans-serif;
-    margin-bottom: 64px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     align-items: center;
 }
 
-.main{
+.main {
     width: 100%;
 }
 
-.forecast{
+.forecast {
     display: grid;
-    grid-template-columns: 800px 384px;
+    grid-template-columns: 1fr 384px;
     gap: 32px;
 }
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
-.right{
+.right {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
-.errorSection{
+.errorSection {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.notFound {
+    margin-top: 16px;
+    color: #ff8a8a;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .forecast {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+
+    .hero {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        margin-bottom: 20px;
+    }
 }
