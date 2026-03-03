@@ -1,0 +1,52 @@
+.page{
+    scrollbar-gutter: stable;
+    background-color: #02012C;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.title{
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+    font-family: "Bricolage Grotesque", sans-serif;
+    margin-bottom: 64px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    align-items: center;
+}
+
+.main{
+    width: 100%;
+}
+
+.forecast{
+    display: grid;
+    grid-template-columns: 800px 384px;
+    gap: 32px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.errorSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

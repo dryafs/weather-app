@@ -1,0 +1,56 @@
+.wrap {
+    margin-bottom: 48px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.indicators {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+    background-color: #262540;
+    border: 1px solid #3C3B5E;
+    border-radius: 12px;
+    padding: 15px 24px;
+}
+
+.name {
+    color: #D4D3D9;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.indicate {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+}
+.skeletonLine {
+    background: linear-gradient(90deg, #302F4A 25%, #3c3b5e 50%, #302F4A 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 6px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeletonName {
+    width: 70%;
+    height: 16px;
+    margin-bottom: 20px;
+}
+
+.skeletonValue {
+    width: 50%;
+    height: 28px;
+}

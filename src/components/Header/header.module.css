@@ -1,0 +1,86 @@
+.header {
+    padding-top: 48px;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.logo {
+    height: 40px;
+
+}
+
+.menuButton {
+    display: flex;
+    background-color: #262540;
+    width: 119px;
+    height: 43px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    width: 12px;
+    height: 17px;
+}
+
+.button {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #302F4A;
+    border-radius: 8px;
+}
+
+.list {
+    background-color: #262540;
+    border: 1px solid #3C3B5E;
+    border-radius: 12px;
+    width: 215px;
+    padding: 10px 15px 10px 15px;
+    position: absolute;
+    z-index: 2;
+}
+
+.title {
+    color: #ACACB7;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.row {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.active {
+    width: 100%;
+    background-color: #302F4A;
+    border-radius: 8px;
+    padding: 5px 10px 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+
+    padding-left: 10px;
+}
+
+.divider {
+    height: 1px;
+    margin: 12px 0;
+    background: rgba(255, 255, 255, 0.08);
+}

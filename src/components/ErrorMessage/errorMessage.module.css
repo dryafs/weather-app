@@ -1,0 +1,43 @@
+.wrap {
+    height: 100vh;
+    background-color: #02012C;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.title {
+    font-weight: 700;
+    font-family: 'Bricolage Grotesque';
+    font-size: 52px;
+    padding-bottom: 15px;
+}
+
+.descr {
+    color: #D4D3D9;
+    max-width: 554px;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.button {
+    display: flex;
+    gap: 5px;
+    background-color: #262540;
+    padding: 15px 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.button_icon {
+    width: 16px;
+    height: 16px;
+}
+
+.button_text {
+    font-size: 16px;
+}
